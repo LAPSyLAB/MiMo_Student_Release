@@ -1,3 +1,10 @@
+# Original project
+
+This is a OR related fork of original thesis project by Kiril Tofiloski
+
+https://github.com/kiriltofiloski/pipelined-MiMo-CPU
+
+
 # CPU Overview
 
 This document describes the changes to the new versions of the pipelined CPU based on the original MiMo CPU model.

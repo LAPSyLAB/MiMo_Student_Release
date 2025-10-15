@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<project source="3.8.0" version="1.0">
-  This file is intended to be loaded by Logisim-evolution v3.8.0(https://github.com/logisim-evolution/).
+<project source="3.9.0" version="1.0">
+  This file is intended to be loaded by Logisim-evolution v3.9.0(https://github.com/logisim-evolution/).
 
   <lib desc="#Wiring" name="0">
     <tool name="Splitter">
@@ -1746,9 +1746,9 @@
     <wire from="(30,230)" to="(30,350)"/>
     <wire from="(30,350)" to="(30,630)"/>
     <wire from="(30,630)" to="(70,630)"/>
+    <wire from="(310,430)" to="(350,430)"/>
     <wire from="(320,1260)" to="(470,1260)"/>
     <wire from="(320,1370)" to="(340,1370)"/>
-    <wire from="(320,430)" to="(350,430)"/>
     <wire from="(330,1270)" to="(330,1280)"/>
     <wire from="(330,1270)" to="(470,1270)"/>
     <wire from="(330,160)" to="(370,160)"/>

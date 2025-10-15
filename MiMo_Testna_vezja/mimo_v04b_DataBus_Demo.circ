@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<project source="3.7.2" version="1.0">
-  This file is intended to be loaded by Logisim-evolution v3.7.2(https://github.com/logisim-evolution/).
+<project source="3.9.0" version="1.0">
+  This file is intended to be loaded by Logisim-evolution v3.9.0(https://github.com/logisim-evolution/).
 
   <lib desc="#Wiring" name="0">
     <tool name="Splitter">
@@ -115,19 +115,19 @@
     <appear>
       <path d="M61,51 Q65,61 69,51" fill="none" stroke="#808080" stroke-width="2"/>
       <rect fill="none" height="241" stroke="#000000" stroke-width="2" width="171" x="50" y="50"/>
-      <circ-anchor facing="east" height="6" width="6" x="47" y="57"/>
-      <circ-port height="10" pin="740,420" width="10" x="215" y="75"/>
-      <circ-port height="8" pin="100,610" width="8" x="46" y="66"/>
-      <circ-port height="8" pin="400,160" width="8" x="216" y="56"/>
-      <circ-port height="8" pin="510,610" width="8" x="46" y="86"/>
-      <circ-port height="8" pin="590,300" width="8" x="46" y="96"/>
-      <circ-port height="8" pin="640,710" width="8" x="216" y="66"/>
-      <circ-port height="8" pin="640,760" width="8" x="216" y="86"/>
-      <circ-port height="8" pin="640,800" width="8" x="216" y="96"/>
-      <circ-port height="8" pin="640,840" width="8" x="216" y="106"/>
-      <circ-port height="8" pin="80,570" width="8" x="46" y="56"/>
-      <circ-port height="8" pin="90,660" width="8" x="46" y="76"/>
-      <circ-port height="8" pin="90,740" width="8" x="46" y="136"/>
+      <circ-anchor facing="east" x="50" y="60"/>
+      <circ-port dir="in" pin="100,610" x="50" y="70"/>
+      <circ-port dir="in" pin="400,160" x="220" y="60"/>
+      <circ-port dir="in" pin="510,610" x="50" y="90"/>
+      <circ-port dir="in" pin="590,300" x="50" y="100"/>
+      <circ-port dir="in" pin="640,710" x="220" y="70"/>
+      <circ-port dir="in" pin="640,760" x="220" y="90"/>
+      <circ-port dir="in" pin="640,800" x="220" y="100"/>
+      <circ-port dir="in" pin="640,840" x="220" y="110"/>
+      <circ-port dir="in" pin="80,570" x="50" y="60"/>
+      <circ-port dir="in" pin="90,660" x="50" y="80"/>
+      <circ-port dir="in" pin="90,740" x="50" y="140"/>
+      <circ-port dir="out" pin="740,420" x="220" y="80"/>
     </appear>
     <comp lib="0" loc="(10,320)" name="Splitter">
       <a name="appear" val="legacy"/>
@@ -162,7 +162,7 @@
       <a name="facing" val="south"/>
       <a name="radix" val="16"/>
     </comp>
-    <comp lib="0" loc="(180,470)" name="Tunnel">
+    <comp lib="0" loc="(180,480)" name="Tunnel">
       <a name="label" val="RAMSel"/>
       <a name="labelfont" val="SansSerif bolditalic 12"/>
     </comp>
@@ -241,7 +241,7 @@
       <a name="labelfont" val="SansSerif bold 12"/>
       <a name="width" val="16"/>
     </comp>
-    <comp lib="0" loc="(50,470)" name="Tunnel">
+    <comp lib="0" loc="(50,480)" name="Tunnel">
       <a name="label" val="CLK"/>
       <a name="labelfont" val="SansSerif bolditalic 12"/>
     </comp>
@@ -490,63 +490,63 @@
       <a name="labelloc" val="north"/>
     </comp>
     <comp lib="5" loc="(90,220)" name="Hex Digit Display"/>
-    <comp lib="6" loc="(112,147)" name="Text">
+    <comp lib="6" loc="(110,145)" name="Text">
       <a name="font" val="SansSerif bold 24"/>
       <a name="text" val="Address BUS"/>
     </comp>
-    <comp lib="6" loc="(172,300)" name="Text">
+    <comp lib="6" loc="(170,300)" name="Text">
       <a name="font" val="SansSerif bold 28"/>
       <a name="text" val="RAM"/>
     </comp>
-    <comp lib="6" loc="(192,709)" name="Text">
+    <comp lib="6" loc="(190,705)" name="Text">
       <a name="font" val="SansSerif bold 20"/>
       <a name="text" val="datasel : 0..PC 1..Dreg 2..Treg 3..ALE"/>
     </comp>
-    <comp lib="6" loc="(229,789)" name="Text">
+    <comp lib="6" loc="(225,785)" name="Text">
       <a name="font" val="SansSerif bold 24"/>
       <a name="text" val="regsrc:0..DBus 1..IMM 2..ALU 3..Sreg"/>
     </comp>
-    <comp lib="6" loc="(309,66)" name="Text">
+    <comp lib="6" loc="(305,65)" name="Text">
       <a name="font" val="SansSerif bold 28"/>
       <a name="text" val="MiMo - Microprogrammed CPU Model"/>
     </comp>
-    <comp lib="6" loc="(415,307)" name="Text">
+    <comp lib="6" loc="(415,305)" name="Text">
       <a name="font" val="SansSerif bold 24"/>
       <a name="text" val="Data BUS"/>
     </comp>
-    <comp lib="6" loc="(540,167)" name="Text">
+    <comp lib="6" loc="(540,165)" name="Text">
       <a name="font" val="SansSerif bold 24"/>
       <a name="text" val="Address"/>
     </comp>
-    <comp lib="6" loc="(587,65)" name="Text">
+    <comp lib="6" loc="(585,65)" name="Text">
       <a name="text" val="v0.5"/>
     </comp>
-    <comp lib="6" loc="(591,513)" name="Text">
+    <comp lib="6" loc="(590,510)" name="Text">
       <a name="font" val="SansSerif bold 28"/>
       <a name="text" val="Ins.Reg."/>
     </comp>
-    <comp lib="6" loc="(630,269)" name="Text">
+    <comp lib="6" loc="(630,265)" name="Text">
       <a name="font" val="SansSerif bold 28"/>
       <a name="text" val="Imm. Reg."/>
     </comp>
-    <comp lib="6" loc="(642,65)" name="Text">
+    <comp lib="6" loc="(640,65)" name="Text">
       <a name="text" val="OR"/>
     </comp>
-    <comp lib="6" loc="(760,716)" name="Text">
+    <comp lib="6" loc="(760,715)" name="Text">
       <a name="font" val="SansSerif bold 24"/>
       <a name="text" val="aluout"/>
     </comp>
-    <comp lib="6" loc="(761,766)" name="Text">
+    <comp lib="6" loc="(760,765)" name="Text">
       <a name="font" val="SansSerif bold 24"/>
       <a name="text" val="pc"/>
     </comp>
-    <comp lib="6" loc="(766,851)" name="Text">
-      <a name="font" val="SansSerif bold 24"/>
-      <a name="text" val="Treg"/>
-    </comp>
-    <comp lib="6" loc="(767,812)" name="Text">
+    <comp lib="6" loc="(765,810)" name="Text">
       <a name="font" val="SansSerif bold 24"/>
       <a name="text" val="Dreg"/>
+    </comp>
+    <comp lib="6" loc="(765,850)" name="Text">
+      <a name="font" val="SansSerif bold 24"/>
+      <a name="text" val="Treg"/>
     </comp>
     <comp loc="(330,380)" name="ShowHexa"/>
     <comp loc="(40,220)" name="ShowHexa"/>
@@ -559,13 +559,13 @@
     <wire from="(100,540)" to="(170,540)"/>
     <wire from="(100,610)" to="(170,610)"/>
     <wire from="(120,230)" to="(220,230)"/>
-    <wire from="(120,470)" to="(120,490)"/>
-    <wire from="(120,470)" to="(160,470)"/>
+    <wire from="(120,480)" to="(120,490)"/>
+    <wire from="(120,480)" to="(160,480)"/>
     <wire from="(130,660)" to="(380,660)"/>
     <wire from="(130,740)" to="(320,740)"/>
     <wire from="(140,510)" to="(170,510)"/>
-    <wire from="(160,470)" to="(160,520)"/>
-    <wire from="(160,470)" to="(180,470)"/>
+    <wire from="(160,480)" to="(160,520)"/>
+    <wire from="(160,480)" to="(180,480)"/>
     <wire from="(160,520)" to="(160,570)"/>
     <wire from="(170,510)" to="(170,540)"/>
     <wire from="(170,510)" to="(180,510)"/>
@@ -577,11 +577,11 @@
     <wire from="(220,160)" to="(330,160)"/>
     <wire from="(220,180)" to="(220,230)"/>
     <wire from="(220,180)" to="(230,180)"/>
+    <wire from="(290,400)" to="(310,400)"/>
     <wire from="(30,320)" to="(50,320)"/>
     <wire from="(30,370)" to="(30,500)"/>
     <wire from="(30,370)" to="(50,370)"/>
     <wire from="(30,500)" to="(70,500)"/>
-    <wire from="(300,400)" to="(310,400)"/>
     <wire from="(310,400)" to="(310,410)"/>
     <wire from="(310,410)" to="(350,410)"/>
     <wire from="(330,160)" to="(370,160)"/>
@@ -595,9 +595,9 @@
     <wire from="(380,530)" to="(380,540)"/>
     <wire from="(380,540)" to="(380,550)"/>
     <wire from="(380,550)" to="(380,660)"/>
-    <wire from="(40,380)" to="(40,470)"/>
+    <wire from="(40,380)" to="(40,480)"/>
     <wire from="(40,380)" to="(50,380)"/>
-    <wire from="(40,470)" to="(50,470)"/>
+    <wire from="(40,480)" to="(50,480)"/>
     <wire from="(400,490)" to="(430,490)"/>
     <wire from="(400,500)" to="(430,500)"/>
     <wire from="(400,510)" to="(420,510)"/>
@@ -683,16 +683,16 @@
       <rect fill="none" height="90" stroke="#008900" stroke-width="6" width="40" x="40" y="30"/>
       <polyline fill="none" points="54,119 58,109" stroke="#000000"/>
       <polyline fill="none" points="64,120 59,109" stroke="#000000"/>
-      <circ-anchor facing="east" height="6" width="6" x="77" y="37"/>
-      <circ-port height="10" pin="350,240" width="10" x="75" y="35"/>
-      <circ-port height="10" pin="350,270" width="10" x="75" y="45"/>
-      <circ-port height="10" pin="350,300" width="10" x="75" y="55"/>
-      <circ-port height="10" pin="350,330" width="10" x="75" y="105"/>
-      <circ-port height="10" pin="350,390" width="10" x="75" y="75"/>
-      <circ-port height="8" pin="120,330" width="8" x="36" y="56"/>
-      <circ-port height="8" pin="120,360" width="8" x="36" y="76"/>
-      <circ-port height="8" pin="180,300" width="8" x="36" y="36"/>
-      <circ-port height="8" pin="220,350" width="8" x="36" y="96"/>
+      <circ-anchor facing="east" x="80" y="40"/>
+      <circ-port dir="in" pin="120,330" x="40" y="60"/>
+      <circ-port dir="in" pin="120,360" x="40" y="80"/>
+      <circ-port dir="in" pin="180,300" x="40" y="40"/>
+      <circ-port dir="in" pin="220,350" x="40" y="100"/>
+      <circ-port dir="out" pin="350,240" x="80" y="40"/>
+      <circ-port dir="out" pin="350,270" x="80" y="50"/>
+      <circ-port dir="out" pin="350,300" x="80" y="60"/>
+      <circ-port dir="out" pin="350,330" x="80" y="110"/>
+      <circ-port dir="out" pin="350,390" x="80" y="80"/>
     </appear>
     <comp lib="0" loc="(120,330)" name="Pin">
       <a name="appearance" val="classic"/>
@@ -772,7 +772,7 @@
       <a name="label" val="IR"/>
       <a name="width" val="16"/>
     </comp>
-    <comp lib="6" loc="(226,208)" name="Text">
+    <comp lib="6" loc="(225,205)" name="Text">
       <a name="font" val="SansSerif bold 24"/>
       <a name="text" val="IR Logic"/>
     </comp>
@@ -807,27 +807,27 @@
       <rect fill="none" height="240" stroke="#ee2306" stroke-width="8" width="80" x="170" y="120"/>
       <polyline fill="none" points="220,350 230,360" stroke="#000000"/>
       <polyline fill="none" points="220,350 210,360" stroke="#000000"/>
-      <circ-anchor facing="east" height="6" width="6" x="227" y="317"/>
-      <circ-port height="10" pin="600,870" width="10" x="245" y="295"/>
-      <circ-port height="10" pin="710,870" width="10" x="245" y="315"/>
-      <circ-port height="10" pin="820,870" width="10" x="245" y="335"/>
-      <circ-port height="10" pin="880,130" width="10" x="245" y="135"/>
-      <circ-port height="10" pin="880,210" width="10" x="245" y="155"/>
-      <circ-port height="10" pin="880,290" width="10" x="245" y="175"/>
-      <circ-port height="10" pin="880,370" width="10" x="245" y="195"/>
-      <circ-port height="10" pin="880,450" width="10" x="245" y="215"/>
-      <circ-port height="10" pin="880,530" width="10" x="245" y="235"/>
-      <circ-port height="10" pin="880,610" width="10" x="245" y="255"/>
-      <circ-port height="10" pin="880,690" width="10" x="245" y="275"/>
-      <circ-port height="8" pin="110,830" width="8" x="196" y="356"/>
-      <circ-port height="8" pin="140,100" width="8" x="166" y="336"/>
-      <circ-port height="8" pin="160,820" width="8" x="166" y="186"/>
-      <circ-port height="8" pin="220,830" width="8" x="216" y="356"/>
-      <circ-port height="8" pin="270,820" width="8" x="166" y="216"/>
-      <circ-port height="8" pin="330,830" width="8" x="236" y="356"/>
-      <circ-port height="8" pin="380,820" width="8" x="166" y="246"/>
-      <circ-port height="8" pin="500,730" width="8" x="166" y="286"/>
-      <circ-port height="8" pin="560,100" width="8" x="166" y="156"/>
+      <circ-anchor facing="east" x="230" y="320"/>
+      <circ-port dir="in" pin="110,830" x="200" y="360"/>
+      <circ-port dir="in" pin="140,100" x="170" y="340"/>
+      <circ-port dir="in" pin="160,820" x="170" y="190"/>
+      <circ-port dir="in" pin="220,830" x="220" y="360"/>
+      <circ-port dir="in" pin="270,820" x="170" y="220"/>
+      <circ-port dir="in" pin="330,830" x="240" y="360"/>
+      <circ-port dir="in" pin="380,820" x="170" y="250"/>
+      <circ-port dir="in" pin="500,730" x="170" y="290"/>
+      <circ-port dir="in" pin="560,100" x="170" y="160"/>
+      <circ-port dir="out" pin="600,870" x="250" y="300"/>
+      <circ-port dir="out" pin="710,870" x="250" y="320"/>
+      <circ-port dir="out" pin="820,870" x="250" y="340"/>
+      <circ-port dir="out" pin="880,130" x="250" y="140"/>
+      <circ-port dir="out" pin="880,210" x="250" y="160"/>
+      <circ-port dir="out" pin="880,290" x="250" y="180"/>
+      <circ-port dir="out" pin="880,370" x="250" y="200"/>
+      <circ-port dir="out" pin="880,450" x="250" y="220"/>
+      <circ-port dir="out" pin="880,530" x="250" y="240"/>
+      <circ-port dir="out" pin="880,610" x="250" y="260"/>
+      <circ-port dir="out" pin="880,690" x="250" y="280"/>
     </appear>
     <comp lib="0" loc="(110,810)" name="Tunnel">
       <a name="label" val="dsel"/>
@@ -1040,7 +1040,7 @@
       <a name="appearance" val="logisim_evolution"/>
       <a name="width" val="16"/>
     </comp>
-    <comp lib="6" loc="(535,59)" name="Text">
+    <comp lib="6" loc="(535,55)" name="Text">
       <a name="font" val="SansSerif bold 24"/>
       <a name="text" val="Register File"/>
     </comp>
@@ -1268,14 +1268,14 @@
     <a name="clabelup" val="north"/>
     <appear>
       <rect fill="#fffe07" height="80" stroke="#9bf300" stroke-width="6" width="30" x="50" y="60"/>
-      <circ-anchor facing="east" height="6" width="6" x="67" y="67"/>
-      <circ-port height="10" pin="640,940" width="10" x="75" y="125"/>
-      <circ-port height="10" pin="700,230" width="10" x="75" y="65"/>
-      <circ-port height="10" pin="710,760" width="10" x="75" y="85"/>
-      <circ-port height="10" pin="710,890" width="10" x="75" y="105"/>
-      <circ-port height="8" pin="100,110" width="8" x="46" y="76"/>
-      <circ-port height="8" pin="100,200" width="8" x="46" y="116"/>
-      <circ-port height="8" pin="330,900" width="8" x="56" y="136"/>
+      <circ-anchor facing="east" x="70" y="70"/>
+      <circ-port dir="in" pin="100,110" x="50" y="80"/>
+      <circ-port dir="in" pin="100,200" x="50" y="120"/>
+      <circ-port dir="in" pin="330,900" x="60" y="140"/>
+      <circ-port dir="out" pin="640,940" x="80" y="130"/>
+      <circ-port dir="out" pin="700,230" x="80" y="70"/>
+      <circ-port dir="out" pin="710,760" x="80" y="90"/>
+      <circ-port dir="out" pin="710,890" x="80" y="110"/>
     </appear>
     <comp lib="0" loc="(100,110)" name="Pin">
       <a name="appearance" val="classic"/>
@@ -1459,7 +1459,7 @@
       <a name="shift" val="rr"/>
       <a name="width" val="16"/>
     </comp>
-    <comp lib="6" loc="(309,67)" name="Text">
+    <comp lib="6" loc="(305,65)" name="Text">
       <a name="font" val="SansSerif bold 24"/>
       <a name="text" val="16-bit ALU"/>
     </comp>
@@ -1635,14 +1635,14 @@
       <rect fill="none" height="70" stroke="#0000f8" stroke-width="8" width="50" x="30" y="50"/>
       <polyline fill="none" points="55,110 50,119" stroke="#000000"/>
       <polyline fill="none" points="55,110 60,120" stroke="#000000"/>
-      <circ-anchor facing="east" height="6" width="6" x="57" y="97"/>
-      <circ-port height="10" pin="520,170" width="10" x="25" y="55"/>
-      <circ-port height="8" pin="200,160" width="8" x="76" y="66"/>
-      <circ-port height="8" pin="200,240" width="8" x="76" y="96"/>
-      <circ-port height="8" pin="350,250" width="8" x="26" y="86"/>
-      <circ-port height="8" pin="420,220" width="8" x="26" y="106"/>
-      <circ-port height="8" pin="450,220" width="8" x="46" y="116"/>
-      <circ-port height="8" pin="490,220" width="8" x="26" y="76"/>
+      <circ-anchor facing="east" x="60" y="100"/>
+      <circ-port dir="in" pin="200,160" x="80" y="70"/>
+      <circ-port dir="in" pin="200,240" x="80" y="100"/>
+      <circ-port dir="in" pin="350,250" x="30" y="90"/>
+      <circ-port dir="in" pin="420,220" x="30" y="110"/>
+      <circ-port dir="in" pin="450,220" x="50" y="120"/>
+      <circ-port dir="in" pin="490,220" x="30" y="80"/>
+      <circ-port dir="out" pin="520,170" x="30" y="60"/>
     </appear>
     <comp lib="0" loc="(200,120)" name="Constant">
       <a name="width" val="16"/>
@@ -1699,7 +1699,7 @@
       <a name="appearance" val="logisim_evolution"/>
       <a name="width" val="16"/>
     </comp>
-    <comp lib="6" loc="(361,300)" name="Text">
+    <comp lib="6" loc="(360,300)" name="Text">
       <a name="font" val="SansSerif bold 24"/>
       <a name="text" val="PC Logic"/>
     </comp>
@@ -1742,12 +1742,12 @@
     <appear>
       <path d="M103,59 Q107,69 111,59" fill="none" stroke="#808080" stroke-width="2"/>
       <rect fill="none" height="10" stroke="#000000" stroke-width="2" width="166" x="55" y="50"/>
-      <circ-anchor facing="east" height="6" width="6" x="57" y="47"/>
-      <circ-port height="10" pin="120,180" width="10" x="155" y="45"/>
-      <circ-port height="10" pin="170,180" width="10" x="205" y="45"/>
-      <circ-port height="10" pin="20,180" width="10" x="55" y="45"/>
-      <circ-port height="10" pin="70,180" width="10" x="105" y="45"/>
-      <circ-port height="8" pin="100,250" width="8" x="136" y="56"/>
+      <circ-anchor facing="east" x="60" y="50"/>
+      <circ-port dir="in" pin="100,250" x="140" y="60"/>
+      <circ-port dir="out" pin="120,180" x="160" y="50"/>
+      <circ-port dir="out" pin="170,180" x="210" y="50"/>
+      <circ-port dir="out" pin="20,180" x="60" y="50"/>
+      <circ-port dir="out" pin="70,180" x="110" y="50"/>
     </appear>
     <comp lib="0" loc="(100,250)" name="Pin">
       <a name="appearance" val="classic"/>
