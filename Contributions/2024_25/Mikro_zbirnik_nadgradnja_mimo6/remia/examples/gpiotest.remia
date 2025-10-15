@@ -1,0 +1,42 @@
+$GPIOA    0x4028
+$GPIOB    0x4030
+
+start:
+    // load GPIO base regs
+    mov r0, #GPIOA
+    mov r1, #GPIOB
+
+    // init r2 to all ones
+    xor r2, r2
+    not r2
+
+    // put all pins into output mode
+    sw r2, [r0]
+    sw r2, [r1]
+
+    // force clear all pins
+    mov r3, #4
+    sw r2, [r0, r3]
+    sw r2, [r1, r3]
+
+    // set alternating pins on GPIOA
+    inc r3
+    mov r2, #0x5555
+    sw r2, [r0, r3]
+    // also on GPIOB but flipped
+    not r2
+    sw r2, [r1, r3]
+
+    mov r3, #2 // outval offset
+inf:
+    // flip GPIOA
+    sw r2, [r0, r3]
+    not r2
+    sw r2, [r0, r3]
+
+    // flip GPIOB
+    sw r2, [r1, r3]
+    not r2
+    sw r2, [r1, r3]
+
+    b inf

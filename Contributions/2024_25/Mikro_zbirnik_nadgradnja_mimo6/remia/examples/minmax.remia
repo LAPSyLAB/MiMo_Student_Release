@@ -1,0 +1,13 @@
+start:
+    mov r0, #123
+    mov r1, #7
+    
+    umn r2, r0, r1
+    umx r3, r0, r1
+
+    umn r4, r1, r0
+    umx r5, r1, r0
+
+// atp registers should be: 123,7,7,123,7,123,0,0
+
+inf: b inf

@@ -1,0 +1,40 @@
+$STACK_TOP 0x4000
+
+$GPIOA    0x4028
+$GPIOB    0x4030
+$FRAMEBUF 0x8000
+$TTY      0xC000
+
+$GPIO_MODE 0
+$GPIO_IN   1
+$GPIO_OUT  2
+$GPIO_CLR  4
+$GPIO_SET  5
+
+
+BOOT:
+    li r0, #TTY
+    li r1, #MSG1
+    xor r3,r3
+LOOP:
+    lw r2, [r1]
+    cmp r2, r3
+    beq SKIP
+    sw r2, [r0]
+    add r1, r1, #1
+    b LOOP
+SKIP:
+
+    li r0, #FRAMEBUF
+    li r1, #0xAAAA
+LOOP2: 
+    sw r1, [r0]
+    xor r1, r1, #0xffff
+    add r0, #1
+    cmp r0, #0x8010
+    bne LOOP2
+
+e:  b e
+
+MSG1: .utf16 "Hello, World!"
+.var 0

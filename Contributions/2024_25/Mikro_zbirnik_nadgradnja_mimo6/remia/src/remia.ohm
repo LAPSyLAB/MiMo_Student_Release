@@ -1,0 +1,140 @@
+Assembler {
+  Program = (Expr "\n"*)*
+
+  Expr = ConstDef | Directive |  Label |Instruction
+
+  // Constant Definition
+  ConstDef = constName number
+
+  // Directives
+  Directive = AtDirective | VarDirective | IncludeDirective | StringDirective
+
+  AtDirective = ".at" number
+  VarDirective = ".var" ListOf<number, ",">
+  IncludeDirective = ".bin_include" stringExpr
+  StringDirective = (".ascii" | ".asciz" | ".utf16") stringExpr
+  
+  Label = label
+  // Label Definition
+  label = name ":"
+
+  // Instructions
+  Instruction = 
+  	| mnemonic register "," register "," register -- rrr
+    | mnemonic register "," register "," Immed -- rri
+    | mnemonic register "," FullIndex  -- rX
+    | mnemonic register "," register -- rr
+    | mnemonic register "," Immed -- ri
+    | mnemonic register "," name -- rb
+    | mnemonic register -- r
+    | mnemonic Immed -- i
+    | mnemonic name -- b
+    | ArglessMnemonic -- n
+    
+  ArglessMnemonic = arglessMnemonic
+
+  // FullIndex
+  FullIndex = BRIndex -- R
+  	| "[" Immed "]" -- I
+  	| "[" register "," register "]" -- RR
+  	| "[" register "," Immed "]" -- RI
+
+  BRIndex = "[" register "]"
+
+  // Immediate Value
+  Immed = namedImmed -- named
+        | literalImmed -- literal
+  namedImmed = "#" name
+  literalImmed = "#" number
+  
+  // ConstName
+  constName = "$" name
+  
+  number = hexNumber | decimalNumber
+  hexNumber = "0x" hexDigit+
+  decimalNumber = digit+
+  ws = " "+
+    
+  register = "r" rdigit  -- numbered
+           | "lr" | "sp"  -- named
+  rdigit = "0".."7"
+  
+  mnemonic = "lwrti2"
+           | "swrdb2"
+           | "addco"
+           | "lwrti"
+           | "subco"
+           | "swrdb"
+           | "addc"
+           | "call"
+           | "push"
+           | "subc"
+           | "add"
+           | "and"
+           | "asr"
+           | "beq"
+           | "bhi"
+           | "bsp"
+           | "bhs"
+           | "blo"
+           | "bls"
+           | "bmi"
+           | "bne"
+           | "bpl"
+           | "cmp"
+           | "dec"
+           | "div"
+           | "inc"
+           | "lsl"
+           | "lsr"
+           | "mod"
+           | "mov"
+           | "mul"
+           | "nnd"
+           | "nor"
+           | "not"
+           | "not"
+           | "orr"
+           | "pop"
+           | "rol"
+           | "ror"
+           | "sub"
+           | "tst"
+           | "umn"
+           | "umx"
+           | "xor"
+           | "br"
+           | "li"
+           | "lw"
+           | "sw"
+           | "b"
+
+  arglessMnemonic =  "nop" | "ret"
+  
+    name = letter (letter | digit | "_")*
+ 
+  stringExpr = "\"" doubleStringCharacter* "\""
+  doubleStringCharacter = ~("\"" | "\\" | lineTerminator) sourceCharacter -- nonEscaped
+                        | "\\" escapeSequence                     -- escaped
+  escapeSequence =  hexEscapeSequence
+                 | characterEscapeSequence 
+  characterEscapeSequence = singleEscapeCharacter
+                          | nonEscapeCharacter
+  nonEscapeCharacter = ~(escapeCharacter | lineTerminator) sourceCharacter
+  hexEscapeSequence = "x" hexDigit hexDigit
+  lineTerminator = "\n" | "\r\n"
+  sourceCharacter = ~lineTerminator any
+  lineContinuation = "\\" lineTerminatorSequence
+  escapeCharacter = singleEscapeCharacter | digit | "x"
+  singleEscapeCharacter = "'" | "\"" | "\\" | "b" | "f" | "n" | "r" | "t" | "v"
+  space := whitespace | lineTerminator | comment
+  comment = "//" (~lineTerminator sourceCharacter)*
+  whitespace = "\t"
+             | "\x0B"    -- verticalTab
+             | "\x0C"    -- formFeed
+             | " "
+             | "\u00A0"  -- noBreakSpace
+             | "\uFEFF"  -- byteOrderMark
+
+  lineTerminatorSequence = "\n" | "\r" ~"\n" | "\r\n"
+}

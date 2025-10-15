@@ -1,0 +1,23 @@
+$STACK 0x4000
+
+li sp, #STACK
+li r0, #1
+li r0, #2
+li r0, #3
+li r0, #4
+
+LOOP:
+    push r0, r1
+    push r2, r3
+    
+    xor r0, r0, r0
+    xor r1, r1, r1
+    xor r2, r2, r2
+    xor r3, r3, r3
+    
+    pop r2, r3
+    pop r0, r1
+
+    nop
+    
+    b LOOP

@@ -1,0 +1,102 @@
+// const
+$CONST 0x1000
+
+// directives
+
+// at
+.at 0x0
+
+//  var single
+.var 0
+
+//  var multiple
+.var 1000, 0x100, 10, 13
+
+.bin_include "test.bin"
+
+//  strings 
+.ascii "test"
+.asciz "test"
+.utf16 "test"
+
+    nop
+
+    mov r0, sp
+    mov lr, #10
+    li  lr, #10
+
+    mul r1, r2, r3  //rrr
+    add r0, r1, #10 //rri
+    div r1, #4      //ri
+    sub r2, r1      //rr
+
+    not r1      //r
+    not r2, r1  //rr
+
+    cmp r1, r4 //rr
+    tst r2, #1 //ri
+
+    addc r0, r1, r3
+    addc r0, r2
+    addco r0, r1
+    addco r1
+
+A1:     beq A2
+A2:     bne A3
+A3:     bmi A4
+A4:     bpl A5
+A5:     bhs A6
+A6:     blo A7
+A7:     bhi A8
+A8:     bls A9
+A9:     br  A10
+A10:    b   A11
+A11:
+
+    b #10
+    b #CONST
+    b r0
+
+    call A1
+    call #CONST
+    call r0
+
+    call lr, A1
+    call lr, #CONST
+    call lr, r0
+
+    lw r0, [r1]
+    lw r0, [r1, r2]
+    lw r0, [r1, #10]
+    lw r0, [#10]
+
+    sw r0, [r1]
+    sw r0, [r1, r2]
+    sw r0, [r1, #10]
+    sw r0, [#10]
+
+    push r0
+    pop  r0
+
+    push r1, r2
+    pop  r1, r2
+
+    swrdb sp, r0
+    lwrti sp, r0
+
+    swrdb2 sp, r0, r1
+    lwrti2 sp, r0, r1
+
+    inc r0, r1
+    inc r1
+    dec r1
+    dec r0, r1
+
+
+    umn r0, r1, r2
+    umx r0, r1, r2
+    umn r1, r2
+    umx r1, r0
+
+    bsp sp
+    ret

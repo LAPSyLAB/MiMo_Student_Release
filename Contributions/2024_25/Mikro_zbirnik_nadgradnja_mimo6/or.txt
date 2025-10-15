@@ -1,0 +1,14 @@
+# OR
+
+## 1. nujno
+1. mikroukazi za `li Rd, Immed`
+2. implementiraj vsaj 4 mikroukaze
+3. Testni programi
+4. MMIO + test program
+5. Se ena naprava
+
+## 1. extra
+1. mikrozbirnik
+2. zbirnik
+3. modifikacije CPUja
+

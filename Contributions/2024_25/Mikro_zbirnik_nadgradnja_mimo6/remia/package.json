@@ -1,0 +1,15 @@
+{
+  "name": "remia",
+  "module": "src/index.ts",
+  "type": "module",
+  "devDependencies": {
+    "@ohm-js/cli": "^2.0.0",
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "ohm-js": "^17.1.0"
+  }
+}

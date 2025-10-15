@@ -1,0 +1,117 @@
+
+
+
+$STACK                          0x4000
+$TTY                            0xC000
+$BOTTLES_OF_BEER_ON_THE_WALL    99
+
+start:
+    li sp, #STACK
+    li r1, #BOTTLES_OF_BEER_ON_THE_WALL
+
+beerloop:
+    mov     r0, r1
+    call    fn_putuint
+
+    mov     r0, #BEER1
+    call    fn_putwstr
+
+    mov     r0, r1
+    call    fn_putuint
+
+    mov     r0, #BEER2
+    call    fn_putwstr
+
+    mov     r0, #BEER3
+    call    fn_putwstr
+
+    dec     r0, r1
+    call    fn_putuint
+
+    mov     r0, #BEER4
+    call    fn_putwstr
+
+    dec r1
+    bne beerloop
+
+inf: 
+    b inf
+
+
+// u16 putuint(u16 n) - prints a number to the tty
+fn_putuint:
+    push    lr
+    push    r1, r2
+    push    r3, r4
+
+    mov     r4, sp  // save stack pointer
+    xor     r1, r1
+    push    r1      // push NULL to stack to terminate the string we're building
+
+    orr     r0, r0
+    beq     putuint_zero // special case: 0
+
+    mov     r2, #10 
+    mov     r3, #48 // load constants
+
+putuint_loop:
+    mod     r1, r0, r2  // get digit into r1
+    add     r1, r3      // add 48 to it
+    push    r1          // push it onto stack
+    div     r0, r2      // divide by 10
+
+    beq     putuint_print_and_exit
+    b       putuint_loop
+
+putuint_zero:
+    add     r1, r3
+    push    r1
+
+putuint_print_and_exit:
+    mov     r0, sp
+    call    fn_putwstr
+
+    mov     sp, r4      // restore stack
+    pop     r3, r4
+    pop     r1, r2
+    ret
+
+
+// u16 putwstr(u16 *buf) - prints a zero terminated wide string to TTY
+fn_putwstr:
+    push    lr
+    push    r1, r2
+    xor     r1, r1, r1
+
+putwstr_loop:
+    lw      r2, [r0, r1] // load
+
+    cmp     r2, #0
+    beq     putwstr_exit // exit loop if char is zero
+
+    // putchr callsite:
+    push    r0          // backup r0
+    mov     r0, r2      // put char in r0
+    call    fn_putchr   // call the function
+    pop     r0          // restore old r0
+
+    inc     r1
+
+    b putwstr_loop
+
+putwstr_exit:
+    mov r0, r1
+    pop r1, r2
+    ret
+
+
+// void putchr(u8 char) - prints a character to TTY 
+fn_putchr:
+    sw  r0, [#TTY]
+    b   lr
+
+
+BEER1: .utf16 " bottles of beer on the wall.\n" .var 0
+BEER2: .utf16 " bottles of beer.\n" .var 0
+BEER3: .utf16 "If one of the bottles just happen to fall,\n" .var 0
+BEER4: .utf16 " bottles of beer on the wall.\n\n" .var 0
