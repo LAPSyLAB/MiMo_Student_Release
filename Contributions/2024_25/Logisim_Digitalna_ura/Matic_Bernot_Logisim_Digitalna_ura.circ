@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<project source="3.8.0" version="1.0">
-  This file is intended to be loaded by Logisim-evolution v3.8.0(https://github.com/logisim-evolution/).
+<project source="3.9.0" version="1.0">
+  This file is intended to be loaded by Logisim-evolution v3.9.0(https://github.com/logisim-evolution/).
 
   <lib desc="#Wiring" name="0">
     <tool name="Splitter">
@@ -778,17 +778,17 @@
       <a name="labelfont" val="SansSerif bold 6"/>
       <a name="width" val="4"/>
     </comp>
-    <comp lib="0" loc="(890,540)" name="Tunnel">
-      <a name="label" val="m10"/>
-      <a name="labelfont" val="SansSerif bold 6"/>
-      <a name="width" val="4"/>
-    </comp>
     <comp lib="0" loc="(900,310)" name="Splitter">
       <a name="appear" val="legacy"/>
       <a name="bit3" val="none"/>
       <a name="facing" val="north"/>
       <a name="fanout" val="3"/>
       <a name="incoming" val="4"/>
+    </comp>
+    <comp lib="0" loc="(900,540)" name="Tunnel">
+      <a name="label" val="m10"/>
+      <a name="labelfont" val="SansSerif bold 6"/>
+      <a name="width" val="4"/>
     </comp>
     <comp lib="0" loc="(900,90)" name="Tunnel">
       <a name="facing" val="north"/>
@@ -917,7 +917,7 @@
       <a name="font" val="SansSerif bold 10"/>
       <a name="text" val="Keyboard (enter time)"/>
     </comp>
-    <comp lib="6" loc="(266,35)" name="Text">
+    <comp lib="6" loc="(265,35)" name="Text">
       <a name="font" val="SansSerif bold 28"/>
       <a name="text" val="Binary Clock"/>
     </comp>
@@ -1008,7 +1008,7 @@
     <wire from="(490,560)" to="(490,590)"/>
     <wire from="(710,500)" to="(780,500)"/>
     <wire from="(710,520)" to="(840,520)"/>
-    <wire from="(710,540)" to="(890,540)"/>
+    <wire from="(710,540)" to="(900,540)"/>
     <wire from="(710,560)" to="(950,560)"/>
     <wire from="(710,580)" to="(1010,580)"/>
     <wire from="(710,600)" to="(1080,600)"/>
@@ -1040,10 +1040,8 @@
     <wire from="(890,200)" to="(900,200)"/>
     <wire from="(890,250)" to="(900,250)"/>
     <wire from="(890,260)" to="(890,290)"/>
-    <wire from="(890,530)" to="(890,540)"/>
-    <wire from="(890,530)" to="(900,530)"/>
     <wire from="(900,250)" to="(900,290)"/>
-    <wire from="(900,310)" to="(900,530)"/>
+    <wire from="(900,310)" to="(900,540)"/>
     <wire from="(910,240)" to="(910,290)"/>
     <wire from="(940,240)" to="(940,260)"/>
     <wire from="(950,140)" to="(970,140)"/>
