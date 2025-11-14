@@ -1,0 +1,41 @@
+Instruction Code	Arguments 				Function
+mov 				Rd, Rs/Immediate 		Rd ←− Rs/Immediate
+mvn 				Rd, Rs/Immediate 		Rd ←− NOT Rs/Immediate
+add 				Rd, Rs, Rt/Immediate 	Rd ←− Rs + Rt/Immediate
+sub 				Rd, Rs, Rt/Immediate 	Rd ←− Rs - Rt/Immediate
+rsb 				Rd, Rs, Rt/Immediate 	Rd ←− Rt/Immediate - Rs
+mul 				Rd, Rs, Rt/Immediate 	Rd ←− Rs * Rt/Immediate
+div 				Rd, Rs, Rt/Immediate 	Rd ←− Rs / Rt/Immediate
+rem 				Rd, Rs, Rt/Immediate 	Rd ←− Rs % Rt/Immediate
+and 				Rd, Rs, Rt/Immediate 	Rd ←− Rs AND Rt/Immediate
+orr 				Rd, Rs, Rt/Immediate 	Rd ←− Rs OR Rt/Immediate
+eor 				Rd, Rs, Rt/Immediate 	Rd ←− Rs XOR Rt/Immediate
+nand 				Rd, Rs, Rt/Immediate 	Rd ←− Rs NAND Rt/Immediate
+nor 				Rd, Rs, Rt/Immediate 	Rd ←− Rs NOR Rt/Immediate
+bic 				Rd, Rs, Rt/Immediate 	Rd ←− Rs AND NOT(Rt/Immediate)
+cmp 				Rs, Rt/Immediate 		Rs - Rt, Set fl ags
+cmn 				Rs, Rt/Immediate 		Rs + Rt, Set fl ags
+tst 				Rs, Rt/Immediate 		Rs XOR Rt, Set fl ags
+teq 				Rs, Rt/Immediate 		Rs AND Rt, Set fl ags
+lsl 				Rd, Rs, Rt/Immediate 	Rd ←− Rs << Rt/Immediate
+lsr 				Rd, Rs, Rt/Immediate 	Rd ←− Rs >> Rt/Immediate
+asr 				Rd, Rs, Rt/Immediate 	Rd ←− Rs >> Rt/Immediate
+											Filled bits are sign bit
+ror 				Rd, Rs, Rt/Immediate 	Rd ←− Rs ROLL RIGHT Rt/Immediate
+rol 				Rd, Rs, Rt/Immediate 	Rd ←− Rs ROLL LEFT Rt/Immediate
+j 					Rs/Immediate/Label 		PC ←− Rs/Immediate/Label
+b 					Rs/Immediate/Label 		PC ←− PC + Rs/Immediate/Label
+bl 					Label 					Jump to subroutine
+											Load Link Register with return address
+rts 				None 					Return from subroutine
+											Always unconditional
+ldr 				Rd, Immediate 			Rd ←− M[Immediate]
+					Rd, [Rs] 				Rd ←− M[Rs]
+					Rd, [Rs, Immediate/Rt] 	Rd ←− M[Rs + Immediate/Rt]
+str 				Rd, Immediate 			M[Immediate] ←− Rd
+					Rs, [Rd] 				M[Rd] ←− Rs
+					Rd, [Rs, Immediate/Rt] 	M[Rs + Immediate/Rt] ←− Rd
+nop 				None 					No operation
+
+
+				Tabela 4.1: Nabor ukazov v MiMo v2

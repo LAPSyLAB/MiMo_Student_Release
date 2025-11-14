@@ -6,3 +6,4 @@
 * [Overview of Stages](overview-of-stages.md)
 * [Assemblers](assemblers.md)
 * [Pipeline Hazard Optimizations](pipeline-hazard-optimizations.md)
+* [Assembler Test Programs](test-programs.md)

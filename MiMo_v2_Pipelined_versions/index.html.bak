@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>MiMo Student Release – Book Viewer</title>
+  <style>
+    body { display: flex; margin: 0; font-family: sans-serif; }
+    nav { width: 280px; background: #f5f5f5; padding: 20px; height: 100vh; overflow: auto; box‐shadow: 2px 0 5px rgba(0,0,0,0.1); }
+    main { flex: 1; padding: 20px; overflow: auto; }
+    nav a { display: block; margin: 8px 0; text-decoration: none; color: #333; }
+    nav a:hover { text-decoration: underline; }
+    iframe { width: 100%; height: 100%; border: none; }
+    h2 { margin-bottom: 1em; }
+  </style>
+</head>
+<body>
+  <nav>
+    <h2>Contents</h2>
+    <!-- Automatically generated links based on SUMMARY.md -->
+    <a href="Introduction.md" target="content">Introduction</a>
+    <a href="Pipelined_Processor.md" target="content">Pipelined Processor</a>
+    <a href="Hazards.md" target="content">Hazards</a>
+    <a href="Forwarding.md" target="content">Forwarding</a>
+    <a href="Branch_Prediction.md" target="content">Branch Prediction</a>
+    <a href="Tournament_Predictor.md" target="content">Tournament Predictor</a>
+    <a href="Cache_Memory.md" target="content">Cache Memory</a>
+    <a href="Summary_and_Outlook.md" target="content">Summary & Outlook</a>
+    <!-- Add or adjust links here if filenames differ -->
+  </nav>
+  <main>
+    <iframe name="content" src="Introduction.md"></iframe>
+  </main>
+</body>
+</html>
