@@ -2,33 +2,63 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>MiMo Student Release – Book Viewer</title>
+  <title>MiMo CPU – Book Viewer</title>
   <style>
-    body { display: flex; margin: 0; font-family: sans-serif; }
-    nav { width: 280px; background: #f5f5f5; padding: 20px; height: 100vh; overflow: auto; box‐shadow: 2px 0 5px rgba(0,0,0,0.1); }
-    main { flex: 1; padding: 20px; overflow: auto; }
-    nav a { display: block; margin: 8px 0; text-decoration: none; color: #333; }
-    nav a:hover { text-decoration: underline; }
-    iframe { width: 100%; height: 100%; border: none; }
-    h2 { margin-bottom: 1em; }
+    body {
+      display: flex;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      height: 100vh;
+    }
+    nav {
+      width: 280px;
+      background: #f5f5f5;
+      padding: 20px;
+      overflow-y: auto;
+      border-right: 1px solid #ddd;
+    }
+    nav h2 {
+      margin-top: 0;
+    }
+    nav a {
+      display: block;
+      margin: 8px 0;
+      text-decoration: none;
+      color: #333;
+      font-size: 15px;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    main {
+      flex: 1;
+      overflow: hidden;
+    }
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
   </style>
 </head>
 <body>
+
   <nav>
-    <h2>Contents</h2>
-    <!-- Automatically generated links based on SUMMARY.md -->
-    <a href="Introduction.md" target="content">Introduction</a>
-    <a href="Pipelined_Processor.md" target="content">Pipelined Processor</a>
-    <a href="Hazards.md" target="content">Hazards</a>
-    <a href="Forwarding.md" target="content">Forwarding</a>
-    <a href="Branch_Prediction.md" target="content">Branch Prediction</a>
-    <a href="Tournament_Predictor.md" target="content">Tournament Predictor</a>
-    <a href="Cache_Memory.md" target="content">Cache Memory</a>
-    <a href="Summary_and_Outlook.md" target="content">Summary & Outlook</a>
-    <!-- Add or adjust links here if filenames differ -->
+    <h2>Table of Contents</h2>
+
+    <a href="README.md" target="content">CPU Overview</a>
+    <a href="instructions.md" target="content">Instructions</a>
+    <a href="control-signals.md" target="content">Control Signals</a>
+    <a href="overview-of-stages.md" target="content">Overview of Stages</a>
+    <a href="assemblers.md" target="content">Assemblers</a>
+    <a href="pipeline-hazard-optimizations.md" target="content">Pipeline Hazard Optimizations</a>
+    <a href="test-programs.md" target="content">Assembler Test Programs</a>
   </nav>
+
   <main>
-    <iframe name="content" src="Introduction.md"></iframe>
+    <!-- Default page loaded on the right -->
+    <iframe name="content" src="README.md"></iframe>
   </main>
+
 </body>
 </html>
