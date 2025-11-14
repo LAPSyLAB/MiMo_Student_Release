@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>MiMo CPU – Book Viewer</title>
+  <title>MiMo CPU v2 – Book Viewer</title>
   <style>
     body {
       display: flex;
@@ -14,7 +14,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
-<title>MiMo CPU – Book Viewer</title>
+<title>MiMo CPU vs – Book Viewer</title>
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 <style>
   body { margin: 0; display: flex; height: 100vh; font-family: Arial, sans-serif; }
@@ -30,7 +30,7 @@
 <body>
 
 <nav>
-  <h2>Table of Contents</h2>
+  <h2>MiMo v2 - Table of Contents</h2>
   <a href="README.md" onclick="loadPage(event)">CPU Overview</a>
   <a href="instructions.md" onclick="loadPage(event)">Instructions</a>
   <a href="control-signals.md" onclick="loadPage(event)">Control Signals</a>
