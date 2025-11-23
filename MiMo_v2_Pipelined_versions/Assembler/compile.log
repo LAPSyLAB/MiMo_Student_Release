@@ -1,0 +1,22 @@
+Compilation started at ned. 16. 11. 2025 20:05:23,67
+Skipping micro-test.txt (already compiled
+Skipping microcode.txt (already compiled
+Skipping tests\general_tests\test1.txt (already compiled
+Skipping tests\general_tests\test2.txt (already compiled
+Skipping tests\general_tests\test3.txt (already compiled
+Skipping tests\general_tests\test4.txt (already compiled
+Skipping tests\general_tests\test5.txt (already compiled
+Skipping tests\general_tests\test6.txt (already compiled
+Skipping tests\general_tests\test7.txt (already compiled
+Skipping tests\general_tests\test8.txt (already compiled
+Skipping tests\prediction_tests\test1-1bit_vs_2bit.txt (already compiled
+Skipping tests\prediction_tests\test2-1bit_vs_2bit_nested_loop.txt (already compiled
+Skipping tests\prediction_tests\test3-correlating_lht.txt (already compiled
+Skipping tests\prediction_tests\test4-tournament.txt (already compiled
+Skipping tests\prediction_tests\test5-bubble_sort.txt (already compiled
+Skipping tests\stall_and_forwarding_tests\test1-nops_needed.txt (already compiled
+Skipping tests\stall_and_forwarding_tests\test2-zaklenitev_with_no_nops.txt (already compiled
+Skipping tests\stall_and_forwarding_tests\test3-operand_forwarding.txt (already compiled
+Skipping tests\stall_and_forwarding_tests\test4-jumps_in_op_forwarding.txt (already compiled
+Skipping tests\stall_and_forwarding_tests\test5-stall_vs_forwarding.txt (already compiled
+SUCCESS: tests\stall_and_forwarding_tests\test5-stall_vs_forwarding.txt 

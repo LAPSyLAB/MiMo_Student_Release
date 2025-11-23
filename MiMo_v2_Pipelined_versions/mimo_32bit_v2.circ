@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<project source="3.8.0" version="1.0">
-  This file is intended to be loaded by Logisim-evolution v3.8.0(https://github.com/logisim-evolution/).
+<project source="3.9.0" version="1.0">
+  This file is intended to be loaded by Logisim-evolution v3.9.0(https://github.com/logisim-evolution/).
 
   <lib desc="#Wiring" name="0">
     <tool name="Splitter">
@@ -14,8 +14,7 @@
       <a name="facing" val="north"/>
     </tool>
     <tool name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="width" val="32"/>
+      <a name="width" val="4"/>
     </tool>
     <tool name="Pull Resistor">
       <a name="facing" val="north"/>
@@ -164,6 +163,10 @@
       <a name="facing" val="north"/>
       <a name="label" val="N"/>
     </comp>
+    <comp lib="0" loc="(1140,40)" name="Tunnel">
+      <a name="label" val="cont"/>
+      <a name="labelfont" val="SansSerif bolditalic 12"/>
+    </comp>
     <comp lib="0" loc="(1140,510)" name="Tunnel">
       <a name="facing" val="north"/>
       <a name="label" val="V"/>
@@ -171,6 +174,11 @@
     <comp lib="0" loc="(1170,510)" name="Tunnel">
       <a name="facing" val="north"/>
       <a name="label" val="Z"/>
+    </comp>
+    <comp lib="0" loc="(120,280)" name="Tunnel">
+      <a name="label" val="cycles"/>
+      <a name="labelfont" val="SansSerif bolditalic 12"/>
+      <a name="width" val="16"/>
     </comp>
     <comp lib="0" loc="(1200,510)" name="Tunnel">
       <a name="facing" val="north"/>
@@ -183,6 +191,18 @@
     <comp lib="0" loc="(1200,670)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="Reset"/>
+    </comp>
+    <comp lib="0" loc="(1270,50)" name="Probe">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="south"/>
+      <a name="labelloc" val="north"/>
+      <a name="radix" val="10unsigned"/>
+    </comp>
+    <comp lib="0" loc="(1270,50)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="cycles"/>
+      <a name="labelfont" val="SansSerif bolditalic 12"/>
+      <a name="width" val="16"/>
     </comp>
     <comp lib="0" loc="(1320,2400)" name="Splitter">
       <a name="appear" val="center"/>
@@ -619,10 +639,6 @@
       <a name="appearance" val="classic"/>
       <a name="facing" val="south"/>
       <a name="radix" val="10unsigned"/>
-    </comp>
-    <comp lib="0" loc="(260,130)" name="Tunnel">
-      <a name="label" val="cont"/>
-      <a name="labelfont" val="SansSerif bolditalic 12"/>
     </comp>
     <comp lib="0" loc="(260,160)" name="Pin">
       <a name="appearance" val="NewPins"/>
@@ -1656,11 +1672,11 @@
     <comp lib="4" loc="(1060,2340)" name="ROM">
       <a name="appearance" val="classic"/>
       <a name="contents">addr/data: 8 32
-0 0 100000 1c1500 1c0000 1c0080 1c1080 1c0100
-1c0180 1c0200 1c0280 1c0300 1c0380 1c0400 1c0480 1c0a80
-80 0 380 280 1c0580 1c0600 1c0680 1c0780
-1c0700 3 5 b 13 8000 180000 1a0000
-190000
+0 100000 1c1500 1c0000 1c0080 1c1080 1c0100 1c0180
+1c0200 1c0280 1c0300 1c0380 1c0400 1c0480 1c0a80 80
+0 380 280 1c0580 1c0600 1c0680 1c0780 1c0700
+3 5 b 13 8000 180000 1a0000 190000
+2e000 1e000
 </a>
       <a name="dataWidth" val="32"/>
     </comp>
@@ -1700,6 +1716,9 @@
       <a name="facing" val="south"/>
       <a name="labelfont" val="SansSerif bold 12"/>
       <a name="labelloc" val="west"/>
+    </comp>
+    <comp lib="5" loc="(1120,40)" name="Button">
+      <a name="label" val="Cont"/>
     </comp>
     <comp lib="5" loc="(1140,510)" name="LED">
       <a name="color" val="#2ef005"/>
@@ -1742,9 +1761,6 @@
     </comp>
     <comp lib="5" loc="(2060,1390)" name="Hex Digit Display">
       <a name="labelvisible" val="true"/>
-    </comp>
-    <comp lib="5" loc="(240,130)" name="Button">
-      <a name="label" val="Cont"/>
     </comp>
     <comp lib="5" loc="(3240,1490)" name="Hex Digit Display">
       <a name="labelvisible" val="true"/>
@@ -2210,8 +2226,10 @@
     <wire from="(1070,920)" to="(1070,930)"/>
     <wire from="(1090,900)" to="(1100,900)"/>
     <wire from="(110,240)" to="(110,280)"/>
+    <wire from="(110,280)" to="(120,280)"/>
     <wire from="(1100,880)" to="(1100,900)"/>
     <wire from="(1100,880)" to="(1150,880)"/>
+    <wire from="(1120,40)" to="(1140,40)"/>
     <wire from="(1150,870)" to="(1150,880)"/>
     <wire from="(1150,870)" to="(1230,870)"/>
     <wire from="(1150,880)" to="(1150,1560)"/>
@@ -2530,7 +2548,6 @@
     <wire from="(2370,1010)" to="(2480,1010)"/>
     <wire from="(2370,280)" to="(2370,460)"/>
     <wire from="(2370,460)" to="(2370,1010)"/>
-    <wire from="(240,130)" to="(260,130)"/>
     <wire from="(2400,1190)" to="(2400,1210)"/>
     <wire from="(2400,1190)" to="(2480,1190)"/>
     <wire from="(2400,50)" to="(2400,60)"/>
@@ -2984,7 +3001,7 @@
     <wire from="(5210,1830)" to="(5250,1830)"/>
     <wire from="(5220,1070)" to="(5240,1070)"/>
     <wire from="(5220,1460)" to="(5230,1460)"/>
-    <wire from="(5230,990)" to="(5240,990)"/>
+    <wire from="(5220,990)" to="(5240,990)"/>
     <wire from="(5240,1500)" to="(5270,1500)"/>
     <wire from="(5240,1540)" to="(5250,1540)"/>
     <wire from="(5240,1560)" to="(5250,1560)"/>
@@ -3211,9 +3228,9 @@
     <wire from="(930,2370)" to="(940,2370)"/>
     <wire from="(940,1510)" to="(940,1540)"/>
     <wire from="(940,1510)" to="(970,1510)"/>
+    <wire from="(940,890)" to="(1060,890)"/>
     <wire from="(950,2330)" to="(950,2360)"/>
     <wire from="(950,2360)" to="(1010,2360)"/>
-    <wire from="(950,890)" to="(1060,890)"/>
     <wire from="(970,1490)" to="(970,1510)"/>
     <wire from="(970,1520)" to="(1010,1520)"/>
     <wire from="(970,1520)" to="(970,1540)"/>
@@ -6586,7 +6603,7 @@
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
     <appear>
-      <rect fill="#b7ff07" fill-opacity="0.514" height="180" stroke="#0093f5" stroke-width="4" width="220" x="50" y="50"/>
+      <rect fill="#b7ff07" fill-opacity="0,514" height="180" stroke="#0093f5" stroke-width="4" width="220" x="50" y="50"/>
       <text dominant-baseline="central" font-family="SansSerif" font-size="16" font-weight="bold" text-anchor="middle" x="212" y="79">AL</text>
       <text dominant-baseline="central" font-family="SansSerif" font-size="16" font-weight="bold" text-anchor="middle" x="212" y="108">HI</text>
       <text dominant-baseline="central" font-family="SansSerif" font-size="16" font-weight="bold" text-anchor="middle" x="212" y="129">LS</text>
@@ -7164,7 +7181,7 @@
     <a name="circuit" val="Instruction_Reg"/>
     <a name="simulationFrequency" val="1.0"/>
     <appear>
-      <rect fill="#ffbf08" fill-opacity="0.514" height="162" stroke="#00f700" stroke-width="4" width="220" x="50" y="49"/>
+      <rect fill="#ffbf08" fill-opacity="0,514" height="162" stroke="#00f700" stroke-width="4" width="220" x="50" y="49"/>
       <text dominant-baseline="central" font-family="SansSerif" font-size="12" font-weight="bold" text-anchor="middle" x="210" y="59">Imm</text>
       <text dominant-baseline="central" font-family="SansSerif" font-size="12" font-weight="bold" text-anchor="middle" x="213" y="77">Rd</text>
       <text dominant-baseline="central" font-family="SansSerif" font-size="12" font-weight="bold" text-anchor="middle" x="213" y="97">Rs</text>
@@ -9407,7 +9424,7 @@
     <appear>
       <rect height="20" stroke="none" width="129" x="50" y="230"/>
       <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="59" y="63">reset</text>
-      <rect fill="#d4d4d4" fill-opacity="0.471" height="201" stroke="#000000" stroke-width="2" width="130" x="50" y="49"/>
+      <rect fill="#d4d4d4" fill-opacity="0,471" height="201" stroke="#000000" stroke-width="2" width="130" x="50" y="49"/>
       <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="58" y="103">continue</text>
       <polygon fill="none" points="50,90 60,80 50,70" stroke="#000000"/>
       <text dominant-baseline="alphabetic" fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="58" y="176">br_addr</text>
@@ -9626,7 +9643,7 @@
     <a name="circuit" val="OpCode_Decoder"/>
     <a name="simulationFrequency" val="1.0"/>
     <appear>
-      <rect fill="#f9fd03" fill-opacity="0.459" height="313" stroke="#f9fd03" stroke-width="5" width="141" x="49" y="28"/>
+      <rect fill="#f9fd03" fill-opacity="0,459" height="313" stroke="#f9fd03" stroke-width="5" width="141" x="49" y="28"/>
       <text dominant-baseline="central" font-family="SansSerif" font-size="9" text-anchor="middle" x="150" y="79">SUB</text>
       <text dominant-baseline="central" font-family="SansSerif" font-size="9" text-anchor="middle" x="152" y="50">MOV</text>
       <text dominant-baseline="central" font-family="SansSerif" font-size="12" text-anchor="middle" x="71" y="158">Flags</text>

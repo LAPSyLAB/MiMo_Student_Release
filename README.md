@@ -5,17 +5,20 @@ MiMo CPU model release for students at Computer Organization course
 
 ### Models description :
 
-- model is the same as for 2023/24/25 (v05a)   
+- MiMo model (v1) is the same as for 2023/24/25 (v05a) 
+- Advanced pipelined MiMo model v2 is added with more details 
 
 ### Changes :
     + new student contributions added
+    + more docs about MiMo V2 added
+        can be seen on https://lapsylab.github.io/MiMo_Student_Release/
 
 ### Important:
 There is quite common error when MiMo model is opened by various versions of Logisim Evolution environment.
 Therefore, if model appears as not working, please check all connections first. 
 Most common place for error is output D from RAM that is interrupted and not connected to Data Bus.
 Maybe some other errors might appear, but as a future engineer you have tools to check, discover and solve problems.
-If you need help, don't hesitate to contact us.
+If you need help, don't hesitate to contact us.d
 
 ## Student release in 2024/25
 

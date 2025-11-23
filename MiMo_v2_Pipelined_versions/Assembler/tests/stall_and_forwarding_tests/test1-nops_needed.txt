@@ -1,10 +1,10 @@
 .text
 
-mov r1, #3	@cycle 5
-mov r2, #3	@cycle 6
-nop		@cycle 7		
-nop		@cycle 8
-nop		@cycle 9
-cmp r1, r2	@cycle 10
-nop		@cycle 11
-streq r1, #3	@cycle 12
+mov r1, #3		@cycle 5
+mov r2, #3		@cycle 6
+nop				@cycle 7		
+nop				@cycle 8
+nop				@cycle 9
+cmp r1, r2		@cycle 10
+nop				@cycle 11
+moveq r1, #1	@cycle 12
