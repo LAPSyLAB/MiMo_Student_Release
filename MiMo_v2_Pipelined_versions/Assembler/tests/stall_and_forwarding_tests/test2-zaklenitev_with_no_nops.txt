@@ -1,3 +1,4 @@
+@testing stall version without nops inserted
 @cycle times are written for zaklenitev version, no nop commands needed
 
 .text

@@ -1,0 +1,17 @@
+@testing jump to subroutine and return
+
+.text
+
+mov r1, #3		@cycle 5
+mov r2, #2		@cycle 6
+@nop			@cycle 7
+@nop			@cycle 8
+bl subroutine		@cycle 9
+add r0, r0, #1		@cycle 16
+add r7, r7, #1		@cycle 17
+add r6, r6, #1		@cycle 18
+
+subroutine: add r0, r0, r1	@cycle 11
+add r7, r7, #5			@cycle 12
+add r6, r6, #10			@cycle 13
+rts				@cycle 14

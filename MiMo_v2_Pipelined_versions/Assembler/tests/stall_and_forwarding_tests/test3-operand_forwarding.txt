@@ -7,16 +7,16 @@
 
 .text
 
-mov r1, #3		@cycle 5
-mov r2, #4		@cycle 6
-mov r6, #2		@cycle 7	
+mov r1, #3			@cycle 5
+mov r2, #4			@cycle 6
+mov r6, #2			@cycle 7	
 add r3, r1, r2		@cycle 8
-mov r4, #12		@cycle 9
+mov r4, #12			@cycle 9
 subs r3, r1, r2		@cycle 10
 movmi r5, #20		@cycle 11
 add r1, r1, #5		@cycle 12
 add r2, r1, r2		@cycle 13
-add r3, r1, r2		@cycle 14
-mov r0, #1		@cycle 15
-ldr r7, [r0]		@cycle 16
-add r2, r0, r7		@cycle 18
+add r3, r1, r2		@cycle 14 - RAW, no cycle lost
+mov r0, #1			@cycle 15
+ldr r7, [r0]		@cycle 16 
+add r2, r0, r7		@cycle 18 - RAW, 1 cycle lost (MA)

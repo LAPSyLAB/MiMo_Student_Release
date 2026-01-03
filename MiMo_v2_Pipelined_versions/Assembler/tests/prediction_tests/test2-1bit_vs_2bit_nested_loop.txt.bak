@@ -1,4 +1,4 @@
-@revised example 1-bit vs 2-bit predictor on nested loop
+@revised example showing the efficiency of a 2-bit predictor over a 1-bit predictor on nested loop
 
 .text
 

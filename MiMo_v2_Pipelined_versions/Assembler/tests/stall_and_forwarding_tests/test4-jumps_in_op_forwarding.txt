@@ -7,5 +7,5 @@ mov r0, #1
 add r1, r1, #3	@cycle 5, 10, 15, 20, 25, 30 ...
 add r2, r2, #3	@cycle 6, 11, 16
 add r3, r1, r2	@cycle 7, 12, 17
-j r0		@cycle 8, 13, 18
+j r0			@cycle 8, 13, 18
 mov r4, #4
