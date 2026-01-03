@@ -1,11 +1,13 @@
 @this is a revised example showing the efficiency of a 2-bit predictor over a 1-bit predictor
 
 /*
+b=1
 while (true){
 	if(a % 2 == 0){jump1}	TNTNTNTNTNT
-	a++		
+	a++	
 }
-a => r0, r1 => used for counting jumps for a 
+a => r0, r1 => used for counting jump1 calls
+
 */
 
 .text
@@ -23,7 +25,6 @@ add r1, r1, #1
 j loop
 
 /*
-using 1-bit predictor: 50/100 predictions are incorrect 
-this makes total sense as a 1-bit predictor is wrong on loop enter and loop exit, and since our loops are alternating we are wrong half the time
-using 2-bit predictor: 25/100 predictions are incorrect, we increased the efficiency of our predictions by half!
+using 1-bit predictor: no predictions are correct
+using 2-bit predictor: 50% of predictions are correct because it starts in state 00 (Strong Not Taken)
 */

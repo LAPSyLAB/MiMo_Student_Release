@@ -94,9 +94,9 @@
 30: addrsel=sreg regsrc=operand dwrite=1 pcsel=pc
 
 #31. ldr - Rd, [Rs, immed/Rt] Rd <- M[Rs + immed/Rt]
-31: op2sel-op2 aluop=add addrsel=aluout regsrc=operand dwrite=1 pcsel=pc
+31: op2sel=op2 aluop=add addrsel=aluout regsrc=operand dwrite=1 pcsel=pc
 
-#32. str - Rs, [Rd] 	M[Rd] <- Rs
+#32. str - Rd, [Rs] 	M[Rs] <- Rd
 32: addrsel=sreg datasel=dreg datawrite=1 pcsel=pc
 
 #33. str - Rd, [Rs, immed/Rt] 	M[Rs + immed/Rt] <- Rd

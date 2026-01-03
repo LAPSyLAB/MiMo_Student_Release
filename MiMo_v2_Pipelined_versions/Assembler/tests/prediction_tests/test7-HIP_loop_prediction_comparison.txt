@@ -1,0 +1,27 @@
+@This example showcases the efficiency provided by each prediction method using MiMo v2.3
+
+.data
+
+.word 1
+
+.text
+
+mov r3,#15
+
+loop:
+ldr r1, [r2]	
+add r1, r1, #1	
+str r1, [r2]	
+subs r4, r3, r1	
+jne loop
+
+mov r7, #7
+
+/*
+using no prediction(branch not taken): 13/14 prediction are incorrect, test ends cycle 116
+using 1-bit predictor: 2/14 predictions are incorrect, test ends cycle 105
+using 2-bit predictor: 3/14 prediction are incorrect, test ends cycle 106
+using correlating LHT: 6/14 incorrect, test ends cycle 109
+using correlating 2 by 2: 5/14 incorrect, test ends cycle 108
+using tournament: 6/14 incorrect, test ends cycle 109
+*/

@@ -1,8 +1,8 @@
-@cycle times are written for zaklenitev version of MiMo, no nop commands needed
+@cycle times are written for zaklenitev version, no nop commands needed
 
 .text
 
-mov r1, #3		@cycle 5
-mov r2, #3		@cycle 6
-cmp r1, r2		@cycle 10
-moveq r1, #1	@cycle 12
+mov r1, #3	@cycle 5
+mov r2, #3	@cycle 6
+cmp r1, r2	@cycle 10
+streq r1, #3	@cycle 12

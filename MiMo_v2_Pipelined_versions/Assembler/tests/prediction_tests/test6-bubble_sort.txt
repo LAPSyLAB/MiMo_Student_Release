@@ -57,15 +57,21 @@ mov r7, #1
     
 
 /*
-Number of incorrect prediction to complete whole sort
+Number of incorrect prediction to complete whole sort (total predictions:109)
 
 no prediction: 37
 1-bit: 52
 2-bit: 32
 correlating LHT: 37
 correlating 2 by 2: 24
-tournament: 35
+tournament: 30
 
-for some reason tournament is worse here than correlating, not sure exactly why, but it's interesting
+Number of cycles to complete sorting:
+no prediction: 605
+1-bit: 620
+2-bit: 600
+correlating LHT: 605
+correlating 2 by 2: 592
+tournament: 598
 */
 

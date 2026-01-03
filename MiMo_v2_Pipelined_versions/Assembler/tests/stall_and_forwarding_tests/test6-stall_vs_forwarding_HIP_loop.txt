@@ -1,0 +1,16 @@
+@This example is taken from the HiP loop lecture example and is meant to showcase the difference between stall and forwarding
+
+.data
+
+.word 1
+
+.text
+
+mov r3,#3	@ 5
+
+loop:		@ stall									| forwarding
+ldr r1, [r2]	@ 6, 19									| 6, 13
+add r1, r1, #1	@ 10, 23								| 8, 15 (here one mandatory stall is used to get the value from the MA stage)
+str r1, [r2]	@ 14, 27								| 9, 16	 
+subs r4, r3, r1	@ 15, 28								| 10, 17
+jne loop	@ 17, 30								| 11, 18

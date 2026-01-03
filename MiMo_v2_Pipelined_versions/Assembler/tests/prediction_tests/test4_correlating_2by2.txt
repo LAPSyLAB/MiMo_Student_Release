@@ -1,0 +1,60 @@
+@testing 2by2 correlating predictor
+@The LHT correlating predictor does not work well in all situations
+@Sometimes, unrelated jumps(that do not share the same address space in the LHT) may affect the correlating predictor and make predictions worse.
+@ Another version of a correlating predictor is one that does not relly on the address space.
+@ It is composed of 4 2-bit predictors and a 'Master' register that dinamically chooses which of the 2-bit predictors to use based on previous predictions
+@ we'll take the same code as with our LHT correlating predictor, but expand it with an extra unrelated jump (with diffrent last 3 address bits)
+
+/*
+while (true){
+	if(a % 2 == 0){jump1}	TNTNTNTNTNT
+	a++		
+	if(b == 1){jump2}	NNNNNNNNNNN
+	
+	if(c % 2 == 0){jump3}	TNTNTNTNTNT
+	c++
+}
+a => r0, b => r1, c=> r2, r5=>stalling command, r3,r4,r6 => counting loops for a, b and c
+*/
+
+.text
+
+loop: 
+rem r0, r0, #2
+cmp r0, #0
+jeq jump1	@2nd instruction
+
+afterjump1:
+add r0, r0, #1
+add r5, r5, #1
+add r5, r5, #1
+add r5, r5, #1
+add r5, r5, #1
+add r5, r5, #1
+cmp r1, #1
+jeq jump2	@10th instruction, same last 3 bits as jump1
+add r4, r4, #1
+rem r2, r2, #2
+cmp r2, #0
+jeq jump3 	@another jump, independant to the last 2
+afterjump3:
+add r2, r2, #1
+j loop
+
+jump1:
+add r3, r3, #1
+j afterjump1
+
+jump2:
+mov r7, #15
+
+jump3:
+add r6, r6, #1
+j afterjump3
+
+/*
+2-bit predictor: 34/100 predictions incorrect
+LHT predictor: 18/100 incorrect
+Correlating 2by2: 4/100 incorrect
+Tournament predictor: 19/100 incorrect
+*/

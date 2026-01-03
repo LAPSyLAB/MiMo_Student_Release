@@ -1,22 +1,26 @@
-Compilation started at ned. 16. 11. 2025 20:05:23,67
-Skipping micro-test.txt (already compiled
-Skipping microcode.txt (already compiled
-Skipping tests\general_tests\test1.txt (already compiled
-Skipping tests\general_tests\test2.txt (already compiled
-Skipping tests\general_tests\test3.txt (already compiled
-Skipping tests\general_tests\test4.txt (already compiled
-Skipping tests\general_tests\test5.txt (already compiled
-Skipping tests\general_tests\test6.txt (already compiled
-Skipping tests\general_tests\test7.txt (already compiled
-Skipping tests\general_tests\test8.txt (already compiled
-Skipping tests\prediction_tests\test1-1bit_vs_2bit.txt (already compiled
-Skipping tests\prediction_tests\test2-1bit_vs_2bit_nested_loop.txt (already compiled
-Skipping tests\prediction_tests\test3-correlating_lht.txt (already compiled
-Skipping tests\prediction_tests\test4-tournament.txt (already compiled
-Skipping tests\prediction_tests\test5-bubble_sort.txt (already compiled
-Skipping tests\stall_and_forwarding_tests\test1-nops_needed.txt (already compiled
-Skipping tests\stall_and_forwarding_tests\test2-zaklenitev_with_no_nops.txt (already compiled
-Skipping tests\stall_and_forwarding_tests\test3-operand_forwarding.txt (already compiled
-Skipping tests\stall_and_forwarding_tests\test4-jumps_in_op_forwarding.txt (already compiled
-Skipping tests\stall_and_forwarding_tests\test5-stall_vs_forwarding.txt (already compiled
+Compilation started at sob. 03. 01. 2026 18:41:32,58
+Skipping micro-test.txt (up-to-date
+Skipping microcode.txt (up-to-date
+SUCCESS: tests\general_tests\test1.txt 
+SUCCESS: tests\general_tests\test2.txt 
+SUCCESS: tests\general_tests\test3.txt 
+SUCCESS: tests\general_tests\test4.txt 
+SUCCESS: tests\general_tests\test5.txt 
+SUCCESS: tests\general_tests\test6.txt 
+SUCCESS: tests\general_tests\test7.txt 
+SUCCESS: tests\general_tests\test8.txt 
+SUCCESS: tests\prediction_tests\test1-1bit_vs_2bit.txt 
+SUCCESS: tests\prediction_tests\test2-1bit_vs_2bit_nested_loop.txt 
+SUCCESS: tests\prediction_tests\test3-correlating_lht.txt 
+SUCCESS: tests\prediction_tests\test4_correlating_2by2.txt 
+SUCCESS: tests\prediction_tests\test5_tournament.txt 
+SUCCESS: tests\prediction_tests\test6-bubble_sort.txt 
+SUCCESS: tests\prediction_tests\test7-HIP_loop_prediction_comparison.txt 
+SUCCESS: tests\stall_and_forwarding_tests\test1-nops_needed.txt 
+SUCCESS: tests\stall_and_forwarding_tests\test2-zaklenitev_with_no_nops.txt 
+SUCCESS: tests\stall_and_forwarding_tests\test3-operand_forwarding.txt 
+SUCCESS: tests\stall_and_forwarding_tests\test4-jumps_in_op_forwarding.txt 
 SUCCESS: tests\stall_and_forwarding_tests\test5-stall_vs_forwarding.txt 
+SUCCESS: tests\stall_and_forwarding_tests\test6-stall_vs_forwarding_HIP_loop.txt 
+SUCCESS: tests\stall_and_forwarding_tests\test7-all-encomposing-ldr.txt 
+SUCCESS: tests\stall_and_forwarding_tests\test8-all-encomposing-str.txt 

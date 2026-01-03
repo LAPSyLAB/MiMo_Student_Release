@@ -1,0 +1,77 @@
+@testing tournament predictor
+@The correlating predictor is not always better than a standard 2-bit predictor
+@Sometimes, unrelated jumps may affect the correlating predictor and make predictions worse.
+@To account for that, we can also use a tournament predictor,
+@ that dinamically chooses whether to to predict using local history(as a correlating predictor) or global history(2-bit predictor)
+
+@In the example below, The correct prediction pattern is TTTTNTTTTNTTNTTT... at different intervals, for each jump every 8 predictions it fails
+@This works well for a standard 2-bit predictor, but not as well for our 2 versions of the correlating predictor
+
+/*
+while(true){
+    	a++
+    	if (a % 8 !== 0) {
+          jump1
+    	}
+    	b++
+    	if (b % 8 !== 2) {
+          jump2    	
+	}
+	c++
+    	if (c % 8 !== 4) {
+          jump3	
+	}
+	d++
+    	if (d % 8 !== 6) {
+          jump4
+	}
+}
+*/
+
+.text
+
+loop:
+add r0, r0, #1
+rems r2, r0, #8
+jne jump1
+afterjump1:
+rem r2, r0, #8
+cmp r2, #2
+jne jump2
+afterjump2:
+rem r2, r0, #8
+cmp r2, #4
+jne jump3
+afterjump3:
+rem r2, r0, #8
+cmp r2, #6
+jne jump4
+j loop
+
+jump1:
+add r5, r5, #1
+j afterjump1
+
+jump2:
+add r6, r6, #1
+j afterjump2
+
+jump3:
+add r7, r7, #1
+j afterjump3
+
+jump4:
+add r4, r4, #1
+j loop
+
+/*
+2-bit predictor: 22/112 predictions incorrect
+LHT predictor: 27/112 incorrect
+Correlating 2by2: 39/112 incorrect
+Tournament predictor: 23/112 incorrect
+
+When using the tournament predictor on test3, only the first 2 predictions are incorrect, just like with the LHT predictor.
+This is the advantage of the Tournament predictor, it is not always the best but it is the most flexible in different kinds of programs.
+*/
+
+
