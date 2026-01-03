@@ -4796,20 +4796,20 @@
       <a name="font" val="SansSerif bold 20"/>
       <a name="text" val="TTY"/>
     </comp>
+    <comp lib="6" loc="(713,334)" name="Text">
+      <a name="text" val="Rd_ID"/>
+    </comp>
     <comp lib="6" loc="(715,355)" name="Text">
       <a name="text" val="Rs_ID"/>
+    </comp>
+    <comp lib="6" loc="(716,377)" name="Text">
+      <a name="text" val="Rt_ID"/>
     </comp>
     <comp lib="6" loc="(730,2240)" name="Text">
       <a name="text" val="Incorrect Predictions"/>
     </comp>
     <comp lib="6" loc="(745,275)" name="Text">
       <a name="text" val="Imm_ID"/>
-    </comp>
-    <comp lib="6" loc="(745,315)" name="Text">
-      <a name="text" val="Rd_ID"/>
-    </comp>
-    <comp lib="6" loc="(745,395)" name="Text">
-      <a name="text" val="Rt_ID"/>
     </comp>
     <comp lib="6" loc="(785,1830)" name="Text">
       <a name="text" val="Jump outcome"/>
@@ -4837,7 +4837,7 @@
       <a name="font" val="SansSerif bold 40"/>
       <a name="text" val="ID"/>
     </comp>
-    <comp lib="6" loc="(928,54)" name="Text">
+    <comp lib="6" loc="(928,55)" name="Text">
       <a name="text" val="v2.3 Forwarding &amp; prediction"/>
     </comp>
     <comp lib="6" loc="(945,1025)" name="Text">
