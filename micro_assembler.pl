@@ -9,8 +9,10 @@ use warnings;
 # v1 : Bug fixed: conz changed to corz   (line 75, RR 11/2017)
 # v2 : MiMo v5a support added (norz instead of corz) (lines 59-62, 75-78, RR 11/2023)
 #      Bug fixed: Line 167  ($cond,$tjump)=($1,$2); instead of ($cond,$jump)=($1,$2);    (Jelovcan) 
+# v3 : The v2 fix above was documented but not applied: partial "if c then X" still
+#      ignored X (both T and F went to the next line). Applied in line 171 (RR 11/2026)
 
-my $version = "v2 (11/2023)";
+my $version = "v3 (11/2026)";
 
 die("Usage: $0 inputfile\n") if (@ARGV!=1);
 
@@ -166,7 +168,7 @@ while (<$IN>) {
 
     # Partial if decision
     if ($jump =~ m{if\s+(\S+)\s+then\s(\S+)}) {
-      ($cond,$jump)=($1,$2);
+      ($cond,$tjump)=($1,$2);
       die("Error: unknown condition $cond\n") if (!defined($Cond{$cond}));
       $cvalue += $Cvalue{"cond=$cond"};
       goto jumpend;

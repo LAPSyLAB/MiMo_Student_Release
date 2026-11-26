@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<project source="3.7.2" version="1.0">
-  This file is intended to be loaded by Logisim-evolution v3.7.2(https://github.com/logisim-evolution/).
+<project source="3.9.0" version="1.0">
+  This file is intended to be loaded by Logisim-evolution v3.9.0(https://github.com/logisim-evolution/).
 
   <lib desc="#Wiring" name="0">
     <tool name="Splitter">
@@ -114,13 +114,16 @@
     <appear>
       <path d="M61,51 Q65,61 69,51" fill="none" stroke="#808080" stroke-width="2"/>
       <rect fill="none" height="241" stroke="#000000" stroke-width="2" width="171" x="50" y="50"/>
-      <circ-anchor facing="east" height="6" width="6" x="47" y="57"/>
-      <circ-port height="10" pin="650,280" width="10" x="215" y="55"/>
-      <circ-port height="8" pin="190,180" width="8" x="46" y="56"/>
-      <circ-port height="8" pin="190,230" width="8" x="46" y="66"/>
-      <circ-port height="8" pin="190,280" width="8" x="46" y="76"/>
-      <circ-port height="8" pin="250,410" width="8" x="46" y="86"/>
-      <circ-port height="8" pin="400,330" width="8" x="46" y="96"/>
+      <circ-anchor facing="east" x="50" y="60"/>
+      <circ-port dir="in" pin="190,180" x="50" y="60"/>
+      <circ-port dir="in" pin="190,230" x="50" y="70"/>
+      <circ-port dir="in" pin="190,280" x="50" y="80"/>
+      <circ-port dir="in" pin="250,410" x="50" y="90"/>
+      <circ-port dir="in" pin="400,330" x="50" y="100"/>
+      <circ-port dir="out" pin="650,280" x="220" y="60"/>
+      <circ-port dir="out" pin="720,160" x="220" y="70"/>
+      <circ-port dir="out" pin="720,190" x="220" y="80"/>
+      <circ-port dir="out" pin="720,220" x="220" y="90"/>
     </appear>
     <comp lib="0" loc="(190,180)" name="Pin">
       <a name="appearance" val="classic"/>
@@ -245,8 +248,39 @@
     <comp lib="0" loc="(650,280)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="facing" val="west"/>
+      <a name="label" val="aluout"/>
       <a name="output" val="true"/>
       <a name="width" val="16"/>
+    </comp>
+    <comp lib="0" loc="(700,160)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="c"/>
+    </comp>
+    <comp lib="0" loc="(700,190)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="z"/>
+    </comp>
+    <comp lib="0" loc="(700,220)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="n"/>
+    </comp>
+    <comp lib="0" loc="(720,160)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="fc"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(720,190)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="fz"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(720,220)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="fn"/>
+      <a name="output" val="true"/>
     </comp>
     <comp lib="0" loc="(770,110)" name="Clock">
       <a name="labelfont" val="SansSerif bold 28"/>
@@ -288,41 +322,41 @@
       <a name="labelfont" val="SansSerif bold 28"/>
       <a name="labelloc" val="north"/>
     </comp>
-    <comp lib="6" loc="(309,66)" name="Text">
+    <comp lib="6" loc="(305,65)" name="Text">
       <a name="font" val="SansSerif bold 28"/>
       <a name="text" val="MiMo - Microprogrammed CPU Model"/>
     </comp>
-    <comp lib="6" loc="(376,457)" name="Text">
-      <a name="font" val="SansSerif bold 24"/>
-      <a name="text" val="op2sel:0..Treg 1..IMM 2..”0” 3..”1”"/>
-    </comp>
-    <comp lib="6" loc="(39,256)" name="Text">
+    <comp lib="6" loc="(35,255)" name="Text">
       <a name="font" val="SansSerif bold 20"/>
       <a name="text" val="OP2"/>
     </comp>
-    <comp lib="6" loc="(40,187)" name="Text">
+    <comp lib="6" loc="(375,455)" name="Text">
+      <a name="font" val="SansSerif bold 24"/>
+      <a name="text" val="op2sel:0..Treg 1..IMM 2..”0” 3..”1”"/>
+    </comp>
+    <comp lib="6" loc="(40,185)" name="Text">
       <a name="font" val="SansSerif bold 20"/>
       <a name="text" val="OP1"/>
     </comp>
-    <comp lib="6" loc="(414,148)" name="Text">
+    <comp lib="6" loc="(410,145)" name="Text">
       <a name="font" val="SansSerif bold 28"/>
       <a name="text" val="ALU"/>
     </comp>
-    <comp lib="6" loc="(467,374)" name="Text">
+    <comp lib="6" loc="(465,370)" name="Text">
       <a name="font" val="SansSerif bold 24"/>
       <a name="text" val="aluop: 0..+ 1..- 2..*  "/>
     </comp>
-    <comp lib="6" loc="(587,65)" name="Text">
+    <comp lib="6" loc="(585,65)" name="Text">
       <a name="text" val="v0.5"/>
     </comp>
-    <comp lib="6" loc="(622,142)" name="Text">
+    <comp lib="6" loc="(620,140)" name="Text">
       <a name="font" val="SansSerif bold 20"/>
       <a name="text" val="Flags"/>
     </comp>
-    <comp lib="6" loc="(642,65)" name="Text">
+    <comp lib="6" loc="(640,65)" name="Text">
       <a name="text" val="OR"/>
     </comp>
-    <comp lib="6" loc="(690,256)" name="Text">
+    <comp lib="6" loc="(690,255)" name="Text">
       <a name="font" val="SansSerif bold 20"/>
       <a name="text" val="aluout"/>
     </comp>
@@ -382,6 +416,9 @@
     <wire from="(620,160)" to="(650,160)"/>
     <wire from="(620,190)" to="(650,190)"/>
     <wire from="(620,220)" to="(650,220)"/>
+    <wire from="(700,160)" to="(720,160)"/>
+    <wire from="(700,190)" to="(720,190)"/>
+    <wire from="(700,220)" to="(720,220)"/>
     <wire from="(770,110)" to="(790,110)"/>
     <wire from="(890,110)" to="(920,110)"/>
   </circuit>
@@ -390,16 +427,17 @@
     <a name="circuit" val="ALU"/>
     <a name="clabelfont" val="SansSerif plain 12"/>
     <a name="clabelup" val="north"/>
+    <a name="simulationFrequency" val="2048000.0"/>
     <appear>
       <rect fill="#fffe07" height="80" stroke="#9bf300" stroke-width="6" width="30" x="50" y="60"/>
-      <circ-anchor facing="east" height="6" width="6" x="67" y="67"/>
-      <circ-port height="10" pin="640,940" width="10" x="75" y="125"/>
-      <circ-port height="10" pin="700,230" width="10" x="75" y="65"/>
-      <circ-port height="10" pin="710,760" width="10" x="75" y="85"/>
-      <circ-port height="10" pin="710,890" width="10" x="75" y="105"/>
-      <circ-port height="8" pin="100,110" width="8" x="46" y="76"/>
-      <circ-port height="8" pin="100,200" width="8" x="46" y="116"/>
-      <circ-port height="8" pin="330,900" width="8" x="56" y="136"/>
+      <circ-anchor facing="east" x="70" y="70"/>
+      <circ-port dir="in" pin="100,110" x="50" y="80"/>
+      <circ-port dir="in" pin="100,200" x="50" y="120"/>
+      <circ-port dir="in" pin="330,900" x="60" y="140"/>
+      <circ-port dir="out" pin="640,940" x="80" y="130"/>
+      <circ-port dir="out" pin="700,230" x="80" y="70"/>
+      <circ-port dir="out" pin="710,760" x="80" y="90"/>
+      <circ-port dir="out" pin="710,890" x="80" y="110"/>
     </appear>
     <comp lib="0" loc="(100,110)" name="Pin">
       <a name="appearance" val="classic"/>
@@ -583,7 +621,7 @@
       <a name="shift" val="rr"/>
       <a name="width" val="16"/>
     </comp>
-    <comp lib="6" loc="(309,67)" name="Text">
+    <comp lib="6" loc="(305,65)" name="Text">
       <a name="font" val="SansSerif bold 24"/>
       <a name="text" val="16-bit ALU"/>
     </comp>
@@ -749,82 +787,5 @@
     <wire from="(610,890)" to="(710,890)"/>
     <wire from="(660,760)" to="(670,760)"/>
     <wire from="(700,760)" to="(710,760)"/>
-  </circuit>
-  <circuit name="ShowHexa">
-    <a name="appearance" val="custom"/>
-    <a name="circuit" val="ShowHexa"/>
-    <a name="clabelfont" val="SansSerif plain 12"/>
-    <appear>
-      <path d="M103,59 Q107,69 111,59" fill="none" stroke="#808080" stroke-width="2"/>
-      <rect fill="none" height="10" stroke="#000000" stroke-width="2" width="166" x="55" y="50"/>
-      <circ-anchor facing="east" height="6" width="6" x="57" y="47"/>
-      <circ-port height="10" pin="120,180" width="10" x="155" y="45"/>
-      <circ-port height="10" pin="170,180" width="10" x="205" y="45"/>
-      <circ-port height="10" pin="20,180" width="10" x="55" y="45"/>
-      <circ-port height="10" pin="70,180" width="10" x="105" y="45"/>
-      <circ-port height="8" pin="100,250" width="8" x="136" y="56"/>
-    </appear>
-    <comp lib="0" loc="(100,250)" name="Pin">
-      <a name="appearance" val="classic"/>
-      <a name="facing" val="north"/>
-      <a name="label" val="Data"/>
-      <a name="width" val="16"/>
-    </comp>
-    <comp lib="0" loc="(100,250)" name="Splitter">
-      <a name="appear" val="legacy"/>
-      <a name="bit1" val="0"/>
-      <a name="bit10" val="2"/>
-      <a name="bit11" val="2"/>
-      <a name="bit12" val="3"/>
-      <a name="bit13" val="3"/>
-      <a name="bit14" val="3"/>
-      <a name="bit15" val="3"/>
-      <a name="bit2" val="0"/>
-      <a name="bit3" val="0"/>
-      <a name="bit4" val="1"/>
-      <a name="bit5" val="1"/>
-      <a name="bit6" val="1"/>
-      <a name="bit7" val="1"/>
-      <a name="bit8" val="2"/>
-      <a name="bit9" val="2"/>
-      <a name="facing" val="north"/>
-      <a name="fanout" val="4"/>
-      <a name="incoming" val="16"/>
-    </comp>
-    <comp lib="0" loc="(120,180)" name="Pin">
-      <a name="appearance" val="classic"/>
-      <a name="facing" val="south"/>
-      <a name="output" val="true"/>
-      <a name="width" val="4"/>
-    </comp>
-    <comp lib="0" loc="(170,180)" name="Pin">
-      <a name="appearance" val="classic"/>
-      <a name="facing" val="south"/>
-      <a name="output" val="true"/>
-      <a name="width" val="4"/>
-    </comp>
-    <comp lib="0" loc="(20,180)" name="Pin">
-      <a name="appearance" val="classic"/>
-      <a name="facing" val="south"/>
-      <a name="output" val="true"/>
-      <a name="width" val="4"/>
-    </comp>
-    <comp lib="0" loc="(70,180)" name="Pin">
-      <a name="appearance" val="classic"/>
-      <a name="facing" val="south"/>
-      <a name="label" val="Digit"/>
-      <a name="output" val="true"/>
-      <a name="width" val="4"/>
-    </comp>
-    <wire from="(100,220)" to="(100,230)"/>
-    <wire from="(100,220)" to="(120,220)"/>
-    <wire from="(110,230)" to="(170,230)"/>
-    <wire from="(120,180)" to="(120,220)"/>
-    <wire from="(170,180)" to="(170,230)"/>
-    <wire from="(20,180)" to="(20,230)"/>
-    <wire from="(20,230)" to="(80,230)"/>
-    <wire from="(70,180)" to="(70,220)"/>
-    <wire from="(70,220)" to="(90,220)"/>
-    <wire from="(90,220)" to="(90,230)"/>
   </circuit>
 </project>
